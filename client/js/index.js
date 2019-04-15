@@ -1,4 +1,7 @@
 var serverUrl = 'http://localhost:3000';
+
+Vue.config.devtools = true
+
 const app = new Vue({
     el: '#app',
     components: {
@@ -53,8 +56,8 @@ const app = new Vue({
     },
     methods: {
         restart: function() {
-            this.articles = [],
-                this.filterArticle = [],
+            this.articles = []
+            this.filterArticle = [],
                 this.myArticles = [],
                 this.article = null,
                 this.profil = false,
@@ -257,7 +260,9 @@ const app = new Vue({
 
         },
         formUpdateShow: function () {
+          
             this.clear()
+            this.profil = true
             this.formUpdate = true
         },
         loginformshow: function () {

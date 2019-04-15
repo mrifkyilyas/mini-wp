@@ -25,13 +25,13 @@ const multer = Multer({
 })
 
 
-router.get('/',Article.listAll)
-router.get('/:id',Article.findOne)
+router.get('/', Article.listAll)
+router.get('/:id', Article.findOne)
 router.use(authenticate)
-router.post('/',multer.single('file'),gcsMiddleware.sendUploadToGCS,Article.create)
-router.get('/user/list',Article.myList)
-router.put('/:id',authorize,multer.single('file'),gcsMiddleware.sendUploadToGCS,Article.update)
-router.delete('/:id',authorize,Article.delete)
+router.post('/', multer.single('file'), gcsMiddleware.sendUploadToGCS, Article.create)
+router.get('/user/list', Article.myList)
+router.put('/:id',authorize ,multer.single('file'), gcsMiddleware.sendUploadToGCS, Article.update)
+router.delete('/:id',authorize, Article.delete)
 
 
 
