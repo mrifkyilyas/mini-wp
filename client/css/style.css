@@ -1,0 +1,10 @@
+.scroll {
+    height:89vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+  }
+
+  body {
+    overflow-x:hidden;
+  }
+  
